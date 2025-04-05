@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><title>สูตรคูณแม่ 34</title></head>
+<body>
+  <h2>สูตรคูณแม่ 34</h2>
+  <ul id="result"></ul>
+  <script>
+    const base = 34;
+    const ul = document.getElementById("result");
+    for (let i = 1; i <= 15; i++) {
+      const li = document.createElement("li");
+      li.textContent = `${base} x ${i} = ${base * i}`;
+      ul.appendChild(li);
+    }
+  </script>
+</body>
+</html>

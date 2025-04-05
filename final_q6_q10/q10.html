@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head><title>เลขในข้อความ</title></head>
+<body>
+  <h2>แสดงตัวอักษรที่มีเลข</h2>
+  <input type="text" id="textInput" placeholder="ใส่ข้อความ">
+  <button onclick="showNumbers()">แสดง</button>
+  <p id="result"></p>
+  <script>
+    function showNumbers() {
+      const text = document.getElementById("textInput").value;
+      const numbers = text.match(/\d+/g);
+      if (numbers) {
+        document.getElementById("result").textContent = `พบตัวเลข: ${numbers.join(", ")}`;
+      } else {
+        document.getElementById("result").textContent = "ไม่พบตัวเลขในข้อความ";
+      }
+    }
+  </script>
+</body>
+</html>

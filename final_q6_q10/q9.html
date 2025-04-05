@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head><title>แสดงข้อมูล JSON</title></head>
+<body>
+  <h2>ข้อมูลทั้งหมด</h2>
+  <pre id="allData"></pre>
+  <h2>ข้อมูลคนที่ 3</h2>
+  <pre id="thirdPerson"></pre>
+  <script>
+    const data = [
+      { name: "Michael", surname: "Pinner", mobile: "091234567", department: "Physics", time: 30 },
+      { name: "David", surname: "Chicago", mobile: "081345678", department: "Physics", time: 35 },
+      { name: "Alex", surname: "Madrid", mobile: "085345683", department: "Physics", time: 25 },
+      { name: "Denis", surname: "Paris", mobile: "064569385", department: "Chemistry", time: 24 }
+    ];
+    document.getElementById("allData").textContent = JSON.stringify(data, null, 2);
+    document.getElementById("thirdPerson").textContent = JSON.stringify(data[2], null, 2);
+  </script>
+</body>
+</html>
